@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="3dp" android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imgWeather"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/imgWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:padding="3dp"
+       >
+
+        <TextView
+            android:id="@+id/txtLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_orange_dark"
+            tools:text="Monrow township,US" />
+
+        <TextView
+            android:id="@+id/txtWeatherMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtDesciption"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/txtLocationName"
+            tools:text="light rain description" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtLocationName"
+            android:singleLine="false"
+            tools:text="here it will come some of temp descrption, wind type"
+            android:id="@+id/txtDesciption" />
+
+        <TextView
+            android:textColor="@android:color/darker_gray"
+            tools:text="Lat:72.6686, Long:56.45555"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/txtDesciption"
+            android:id="@+id/txtLatAndLong"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+    </RelativeLayout>
+</RelativeLayout>
